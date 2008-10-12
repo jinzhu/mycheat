@@ -1,0 +1,7 @@
+= mac_glyphs: "\xE2\x8C\x98 = command
+
+  \xE2\x8C\x83 = control
+
+  \xE2\x8C\xA5 = option
+
+  \xE2\x87\xA7 = shift"

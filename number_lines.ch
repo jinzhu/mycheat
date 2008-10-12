@@ -1,0 +1,20 @@
+= number_lines: "\t
+
+  nl      Number lines. Advanced options.
+
+  cat -n  Number all lines
+
+  cat -b  Number all non-blank lines
+
+  
+
+  
+
+  # Count lines
+
+  wc -l   
+
+  awk 'NF != 0 {++count} END {print count}';
+
+  sed -n '$='
+"

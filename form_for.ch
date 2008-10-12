@@ -1,0 +1,4 @@
+= form_for: |-
+  form_for :table do |table|
+    table.text_field :table_field
+  end

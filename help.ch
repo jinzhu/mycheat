@@ -1,0 +1,4 @@
+= help: |-
+  Hey, welcome to cheat.  Thanks for trying it out.
+  
+  For a real, honest-to-goodness help page, run `cheat cheat`.

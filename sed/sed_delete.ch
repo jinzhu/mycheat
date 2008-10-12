@@ -1,0 +1,66 @@
+= sed_delete: " # print all of file EXCEPT section between 2 regular expressions
+ sed '/Iowa/,/Montana/d'
+
+  
+ # delete duplicate, consecutive lines from a file (emulates \"uniq\").
+ # First line in a set of duplicate lines is kept, rest are deleted.
+ sed '$!N; /^\\(.*\\)\\1$/!P; D'
+
+  
+ # delete duplicate, nonconsecutive lines from a file. Beware not to
+ # overflow the buffer size of the hold space, or else use GNU sed.
+ sed -n 'G; s/\\n/&&/; /^\\([ -~]*\\).*\\1/d; s/\\n//; h; P'
+
+  
+ # delete all lines except duplicate lines (emulates \"uniq -d\").
+ sed '$!N; s/^\\(.*\\)\\1$/\\1/; t; D'
+
+  
+ # delete the first 10 lines of a file
+ sed '1,10d'
+
+  
+ # delete the last line of a file
+ sed '$d'
+
+  
+ # delete the last 2 lines of a file
+ sed 'N;$!P;$!D;$d'
+
+  
+ # delete the last 10 lines of a file
+ sed -e :a -e '$d;N;2,10ba' -e 'P;D'   # method 1
+ sed -n -e :a -e '1,10!{P;N;D;};N;ba'  # method 2
+
+  
+ # delete every 8th line
+ gsed '0~8d'                           # GNU sed only
+ sed 'n;n;n;n;n;n;n;d;'                # other seds
+
+  
+ # delete ALL blank lines from a file (same as \"grep '.' \")
+ sed '/^$/d'                           # method 1
+ sed '/./!d'                           # method 2
+
+  
+ # delete all CONSECUTIVE blank lines from file except the first; also
+ # deletes all blank lines from top and end of file (emulates \"cat -s\")
+ sed '/./,/^$/!d'          # method 1, allows 0 blanks at top, 1 at EOF
+ sed '/^$/N;/\\n$/D'        # method 2, allows 1 blank at top, 0 at EOF
+
+  
+== # delete all CONSECUTIVE blank lines from file except the first 2:
+ sed '/^$/N;/\\n$/N;//D'
+
+  
+ # delete all leading blank lines at top of file
+ sed '/./,$!d'
+
+  
+ # delete all trailing blank lines at end of file
+ sed -e :a -e '/^\\n*$/{$d;N;ba' -e '}'  # works on all seds
+ sed -e :a -e '/^\\n*$/N;/\\n$/ba'        # ditto, except for gsed 3.02*
+
+  
+ # delete the last line of each paragraph
+ sed -n '/^$/{p;h;};/./{x;/./p;}'"
