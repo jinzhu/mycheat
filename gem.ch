@@ -1,5 +1,8 @@
-= gem: |-
-  Install a gem
+= Gem :
+== Add New Source:
+    gem sources -a http://gems.github.com
+
+==  Install a gem
   
     gem install [gem name]
   
@@ -26,10 +29,8 @@
 == Current Local Gem Repository:
   
     gem environment
-  
-    or
-  
-    ruby -rrubygems -e"puts Gem.path"
+    OR
+    ruby -r rubygems -e "puts Gem.path"
   
 == Discover Dependency for a Gem:
   
@@ -39,6 +40,6 @@
   
     gem install [gem name] --no-ri --no-rdoc
   
-== to set this as default behavior:
+   To set this as default behavior:
   
     echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
