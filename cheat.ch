@@ -1,5 +1,5 @@
-= cheat: |
-  Hi, welcome to cheat (http://cheat.errtheblog.com).
+= @@@che@@@at: |
+  Hi, @@@welcome@@@ to cheat (http://cheat.errtheblog.com).
   Thanks for trying it out.  
   
   Here are a few commands to get you started.
