@@ -48,3 +48,10 @@
 === Locating package documentation
       ls -l /usr/share/doc/alsa-lib-1.0.14_rc1
       equery files alsa-lib | less
+
+== Installing the gnumeric prebuilt package
+    emerge --usepkg --getbinpkg gnumeric
+
+    Setting PORTAGE_BINHOST in /etc/make.conf
+    PORTAGE_BINHOST="ftp://buildhost/gentoo"
+
