@@ -3,6 +3,14 @@
    emerge --sync
    emerge-webrsync
 
+== Update System::
+=== Updating your System:
+      emerge --update --ask world
+=== Updating your entire system
+     emerge --update --deep world
+=== Performing a full update
+     emerge --update --deep --newuse world
+
 == Search:
 === Search for packages (package names only): --search (-s)
     emerge -s keyword
@@ -11,6 +19,11 @@
 
 == Uninstalling:  --unmerge (-C)
   emerge -C package
+  emerge --unmerge gnumeric
+== Removing orphaned dependencies
+  emerge --update --deep --newuse world
+  emerge --depclean
+  revdep-rebuild  (provided by the gentoolkit)
 
 == Pretending: --pretend (-p)
   emerge -p package
@@ -27,3 +40,11 @@
 ===  Tells emerge to only use binary packages (from $PKGDIR).  --usepkgonly (-K)
     emerge -K mozilla
     emerge --usepkgonly mozilla
+
+== Finding Installed Package Documentation:
+=== Checking the existence of a doc USE flag:
+      emerge -vp alsa-lib
+      [ebuild  N    ] media-libs/alsa-lib-1.0.14_rc1  -debug +doc 698 kB
+=== Locating package documentation
+      ls -l /usr/share/doc/alsa-lib-1.0.14_rc1
+      equery files alsa-lib | less
