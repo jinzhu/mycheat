@@ -26,3 +26,5 @@
     scrot -cd 10 ~/abc.png
     scrot -t 20% -s ~/abc.png
     scrot -s ~/abc.png -e 'gimp $f'
+    scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/images/shots/'
+    Creates a file called something like 2000-10-30_2560x1024_scrot.png
