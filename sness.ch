@@ -1,1 +1,0 @@
-= sness: http://sness.net
