@@ -1,12 +1,27 @@
 = System Information:
-   $ uname -a               # 查看内核/操作系统/CPU信息
-   $ head -n 1 /etc/issue   # 查看操作系统版本
-   $ cat /proc/cpuinfo      # 查看CPU信息
-   $ hostname               # 查看计算机名
-   $ lspci -tv              # 列出所有PCI设备
-   $ lsusb -tv              # 列出所有USB设备
-   $ lsmod                  # 列出加载的内核模块
-   $ env                    # 查看环境变量资源
+   $ arch                   # show architecture of machine
+   $ uname -a               # display kernel cpu system information
+   $ head -n 1 /etc/issue   # display Operate System version 
+   $ dmidecode -q           # show hardware system components - (SMBIOS / DMI)
+
+   $ hdaparm -i /dev/hda    # displays the characteristics of a hard-disk
+   $ hdparm -tT /dev/sda    # perform test reading on a hard-disk
+
+   $ cat /proc/cpuinfo      # show information CPU info
+   $ cat /proc/interrupts   # show interrupts
+   $ cat /proc/meminfo      # verify memory use
+   $ cat /proc/swaps        # show file(s) swap
+   $ cat /proc/version      # show version of the kernel
+   $ cat /proc/net/dev      # show network adpters and statistics
+   $ cat /proc/mounts       # show mounted file system(s)
+
+   $ cal 2007               # show the timetable of 2007
+   $ hostname               # display computer name
+
+   $ lspci -tv              # display PCI devices
+   $ lsusb -tv              # show USB devices
+   $ lsmod                  # show all loaded moduel
+   $ env                    # show environment information
    $ free -m                # 查看内存使用量和交换区使用量
    $ df -h                  # 查看各分区使用情况
    $ du -sh                 # 查看指定目录的大小
@@ -36,4 +51,3 @@
    $ chkconfig --list       # 列出所有系统服务
    $ chkconfig --list | grep on    # 列出所有启动的系统服务程序
    $ rpm -qa                # 查看所有安装的软件包
-
