@@ -3,19 +3,21 @@
   ifconfig eth0 192.168.201.13 netmask 255.255.255.0
   route add default gw 192.168.201.1 eth0
 
+== Net Status:
+  netstat
+
 == For Gentoo:
-
 === Modfiy the /etc/conf.d/net:
-     For DHCP
-     config_eth0=( "dhcp" )
+   For DHCP
+   config_eth0=( "dhcp" )
 
-     # For static IP using CIDR notation
-     config_eth0=( "192.168.0.7/24" )
-     routes_eth0=( "default via 192.168.0.1" )
+   # For static IP using CIDR notation
+   config_eth0=( "192.168.0.7/24" )
+   routes_eth0=( "default via 192.168.0.1" )
 
-     # For static IP using netmask notation
-     config_eth0=( "192.168.0.7 netmask 255.255.255.0" )
-     routes_eth0=( "default via 192.168.0.1" )
+   # For static IP using netmask notation
+   config_eth0=( "192.168.0.7 netmask 255.255.255.0" )
+   routes_eth0=( "default via 192.168.0.1" )
 
 === Starting and stopping network scripts:
     /etc/init.d/net.eth0 start
