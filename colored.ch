@@ -1,5 +1,5 @@
 = colored: |
-  cute.
+==  cute.
   
     >> puts "this is red".red
    
@@ -14,7 +14,7 @@
     >> puts Color.red "This is red" # but this part is mostly untested
   
 == Windows users:
-== You will need the Win32 Console Ansi gem.  Get it:
+   You will need the Win32 Console Ansi gem.  Get it:
   
     $ sudo gem install win32console-1.0.0
   
@@ -22,5 +22,3 @@
   
   >> chris[at]ozmm[dot]org
   => http://errtheblog.com/
-  
-

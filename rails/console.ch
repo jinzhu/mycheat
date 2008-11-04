@@ -1,7 +1,12 @@
-= rails_console: |
+= Console:
+== Specifying console environment (defaults to development):
+  $ script/console production
+
 == Reloading the Console Environment:
   >> reload!
-  >> Dispatcher.reset_application!   # (outdated)
+  
+== Start in a sandbox:
+  $ ./script/console -s
   
 == Load and execute a Ruby script:
   >> load "the_file_name.rb"
@@ -20,18 +25,8 @@
   >> helper.pluralize 2, "story" 
   => "2 stories"
   
-== Clear the console:
-  ctrl + l or Command + k (Mac)
-  
-== How-to Examine Routes:
+== Examine Routes:
   rs = ActionController::Routing::Routes
   puts rs.routes
   rs.recognize_path "/session"
   rs.generate :controller => "users", :action => "edit", :id => "4"
-  
-  Print as YAML
-  >> y @something
-  
-  Start in a sandbox (any modifications you make to the database will be rolled back on exit)
-  $ ./script/console -s
-
