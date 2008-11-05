@@ -3,6 +3,8 @@
   \033[**;**;**m       \033[0m
 
   For Example: echo -e '\033[31m hello \033[0m'
+=== Ruby:
+  puts "\e[33m string \e[0m"
 
 ==  All available setting:
    \033[1m   -   Change text to hicolor (bold) mode
