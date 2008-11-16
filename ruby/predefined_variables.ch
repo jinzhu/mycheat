@@ -1,4 +1,4 @@
-= Predefined Variables:
+= Predefined Variables:( http://www.ruby-doc.org/docs/ruby-doc-bundle/Manual/man-1.4/variable.html )
 == Exception Information
   $! Exception The exception object passed to raise. [thread]
 
