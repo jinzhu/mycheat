@@ -11,8 +11,9 @@
 == Set I18n.locale with a before_filter:
   before_filter :set_locale
   def set_locale
+    session[:locale] = params[:locale] if params[:locale]
     # if this is nil then I18n.default_locale will be used
-    I18n.locale = params[:locale] 
+    I18n.locale = session[:locale]
   end
 
   http://www.artweb-design.de/2008/7/18/the-ruby-on-rails-i18n-core-api
