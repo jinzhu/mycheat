@@ -9,6 +9,8 @@ E.g:
   $ mount /dev/hdb /mnt/cdrecorder      mount a cdrw / dvdrom
   $ mount -o loop file.iso /mnt/cdrom   mount a file or iso image
   $ mount -o remount,rw /
+  $ mount -t vfat -o utf8 /dev/sdb /mnt/disk
+  $ mount -t ntfs /dev/sdb /mnt -o charset=utf8,umask=022
   $ mount -t vfat /dev/hda5 /mnt/hda5   mount a Windows FAT32 file system
 
 == Umount:
