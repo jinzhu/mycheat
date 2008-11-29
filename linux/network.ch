@@ -6,6 +6,24 @@
 == Net Status:
   netstat
 
+== For Arch:
+=== /etc/rc.conf
+  # DHCP:     Set your interface to "dhcp" (eth0="dhcp")
+  eth0="eth0 192.168.201.12 netmask 255.255.255.0"
+  INTERFACES=(eth0)
+
+  gateway="default gw 192.168.201.1"
+  ROUTES=(gateway)
+=== Network Profiles:
+  $ pacman -Sy core/netcfg
+  # Create the profile
+  /etc/network.d/
+  For more examples and further options see the files in /etc/network.d/examples/*
+  # To connect a profile just execute the following command as root:
+  $ netcfg <profile-name>
+
+  http://wiki.archlinux.org/index.php/Network_Profiles
+
 == For Gentoo:
 === Modfiy the /etc/conf.d/net:
    For DHCP
