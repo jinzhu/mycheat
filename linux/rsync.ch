@@ -4,4 +4,4 @@
   Push: rsync [OPTION...] SRC... [USER@]HOST:DEST
 
   e.g:
-  $ rsync back_dir mvp:~/remote_dir/ -rv
+  $ rsync local_dir mvp:~/remote_dir/ -rv
