@@ -1,4 +1,4 @@
 = mysql_delete:
 
   DELETE FROM tables (where ***)
-  @@@NOTE@@@ Please SELECT first before DELETE
+  @NOTICE@ Please SELECT first before DELETE
