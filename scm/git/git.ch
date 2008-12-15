@@ -140,7 +140,13 @@
   git checkout -b <new> <start-point>
     create a new branch <new> referencing <start-point>, and check it out.
 
+  git push origin master:branch
+  git push origin <local branch name>:refs/heads/<remote branch name>
+    Push your local branch
+
   git push <repository> :heads/<branch>
+  git push origin :<remote branch name>
+
     removes a branch from a remote repository. 
     Example: git push origin :heads/old_branch_to_be_deleted
 
