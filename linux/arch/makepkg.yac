@@ -1,0 +1,6 @@
+= MAKEPKG:
+  PKGBUILD
+  $ makepkg
+
+  Install the package
+  $ pacman -U package.pkg.tar.gz 
