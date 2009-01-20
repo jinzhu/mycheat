@@ -1,13 +1,18 @@
 = Switch Caps/Ctrl:
 
 == X:
- modify /etc/X11/xorg.conf
- Switch : 
-   ADD:
-   Option "XkbOptions" "ctrl:swapcaps"
- NO Caps:
-   ADD:
-   Option "XkbOptions" "ctrl:nocaps"
+ .Xmodmap 
+   remove Lock = Caps_Lock
+   keysym Caps_Lock = Control_L
+   add Control = Control_L
+
+ /etc/X11/xorg.conf
+   Switch : 
+     ADD:
+     Option "XkbOptions" "ctrl:swapcaps"
+   NO Caps:
+     ADD:
+     Option "XkbOptions" "ctrl:nocaps"
 
 == Terminal:
   #!/bin/bash
