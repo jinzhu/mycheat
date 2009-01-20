@@ -1,0 +1,17 @@
+# vi:ft=cheat.help
+= HTML:
+
+  :HTML[mappings] {disable/off/enable/on}
+  :let g:html_tag_case = 'lowercase'
+
+== Mappings for Normal <> Tags
+  <Tab>	jump
+
+  e.g:  ;dd  ;de  ;df
+
+== Mappings for &...; Codes
+   e.g:   &&  &>  &Al  &Be
+
+== Browser Mappings
+   ;ff firefox (;tff ;nff)
+   ;oa opera   (;toa ;noa)
