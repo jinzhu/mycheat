@@ -14,7 +14,7 @@
   $ groupmod -n new_group_name old_group_name   rename a group
 
 == Adding a user to a group:
-   gpasswd -a username wheel
+  $ sudo gpasswd -a username wheel
 
 == Other:
   $ pwck    check correct syntax and file format of '/etc/passwd' and users existence

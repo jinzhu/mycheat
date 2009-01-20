@@ -1,23 +1,22 @@
-= tar rar zip: |-
-
+= TAR RAR ZIP:
 == Tar:
-=== To extract:
+=== Extract:
+  $ tar xf  file.tar
   $ tar zxf file.tar.gz
   $ tar zxf file.tgz
   $ tar jxf file.tar.bz2
   $ tar jxf file.tbz2
-=== To Create Archive:
-  $ tar zcf file.tar.gz [file]
-  $ tar zcf file.tgz [file]
+=== Create archive:
+  $ tar zcf file.tar.gz  [file]
+  $ tar zcf file.tgz     [file]
   $ tar jcf file.tar.bz2 [file]
-  $ tar jcf file.tbz2  [file]
+  $ tar jcf file.tbz2    [file]
 
 == rar:
-=== To extract:
+=== Extract:
   $ rar x file.rar      Extract files with full path
   $ rar e file.rar      Extract files to current directory
-
-=== To Create Archive:
+=== Create Archive:
   $ rar a file.rar files
 
 === Other:

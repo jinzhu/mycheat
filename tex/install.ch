@@ -11,6 +11,7 @@
 
   Extract into the Texlive install path (e.g: /usr/share/texmf-var/tex/)
   $ sudo mktexlsr
+
 === Gentoo:
   layman/gentoo-china
   $ sudo emerge zhcon xecjk

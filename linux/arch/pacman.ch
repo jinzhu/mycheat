@@ -43,6 +43,7 @@
 == Backing Up and Retrieving List of Installed Packages For Quick Software Restore
 === backup the current list of packages:
   $ pacman -Qqe > pkglist
+
 === Install the all backuped packages:
   $ pacman -S $(cat pkglist)
 
@@ -66,6 +67,5 @@
 === Help:
   $ pacman -Q --help
   $ pacman -S --help  ...
-
 
 == WIKI: http://wiki.archlinux.org/index.php/Pacman

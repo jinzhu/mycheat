@@ -1,11 +1,12 @@
 = Use:
 == System Globally Use:
-    /etc/make.conf
+  /etc/make.conf
+    USE="-qt3 ..."
 
 == Declaring USE flags for individual packages
-    /etc/portage/package.use
-    E.g:
-      dev-db/mysql berkdb
+  /etc/portage/package.use
+  e.g:
+    dev-db/mysql berkdb
 
 == Declare temporary USE flags
-   $ USE="-java" emerge seamonkey
+  $ USE="-java" emerge seamonkey

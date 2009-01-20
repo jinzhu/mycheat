@@ -1,16 +1,16 @@
 = chmod: |-
 == chmod: a Unix utility for managing file permissions
-  
-                            Description | Octal  | Human-readable
-      ----------------------------------+--------+---------------
-                         Set user write | 200    | u=w
-      Set user rwx, group and others rx | 755    | u=rwx,go=rx
-                         Add group read | -      | g+w
-                     Remove all execute | 111    | a-x
-       Set user rws, everyone else none | 4700   | u=rwxs,go-rwx
-                        Add user sticky | -      | u+s
-                       Add group sticky | -      | g+s
-  
+
+                         Description | Octal  | Human-readable
+   ----------------------------------+--------+---------------
+                      Set user write | 200    | u=w
+   Set user rwx, group and others rx | 755    | u=rwx,go=rx
+                      Add group read | -      | g+w
+                  Remove all execute | 111    | a-x
+    Set user rws, everyone else none | 4700   | u=rwxs,go-rwx
+                     Add user sticky | -      | u+s
+                    Add group sticky | -      | g+s
+
 
    * The read bit adds 4 to its total,
    * The write bit adds 2 to its total,

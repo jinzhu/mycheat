@@ -4,8 +4,8 @@
 
 == Modify package.keywords (/etc/portage/package.keywords ):
   app-office/gnumeric ~x86
-  @@@You can also enter a version range using the <=, <, > or >= operators.@@@
-  EX: =app-office/gnumeric-1.2.13 ~x86
+  @You can also enter a version range using the <=, <, > or >= operators.@
+  e.g: =app-office/gnumeric-1.2.13 ~x86
 
 == Modify package.unmask (/etc/portage/package.unmask):
   =net-mail/hotwayd-0.8
