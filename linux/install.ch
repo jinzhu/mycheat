@@ -8,3 +8,13 @@
 == Disc Install fedora
   kernel (hd0,3)/vmlinuz0 root=/dev/sda4
   initrd (hd0,3)/initrd.img
+
+== Disc Install Arch
+  kernel (hd0,3)/vmlinuz0 root=/dev/sda4
+  initrd (hd0,3)/initrd.img
+  
+  $ sudo mount -o loop iso_path mount_path
+
+  $ ln -s mount_path/addons/core-pkgs /var/cache/pacman/pkg
+
+  $ ./arch/install
