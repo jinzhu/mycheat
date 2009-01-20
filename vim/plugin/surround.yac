@@ -1,0 +1,28 @@
+= Surround:
+== surround-targets
+   b   =>     )
+   B   =>     }
+   r   =>     ]
+   a   =>     >
+   t   =>     pair of HTML or XML tags
+   w   =>     word
+   W   =>     WORD
+   s   =>     sentence
+   p   =>     paragraph
+
+== MAPPINGS
+   ds      Delete surroundings
+   cs      Change surroundings
+   ys      Takes a valid Vim motion or text object as the first object
+   yss     operates on the current line
+   yS/ySS  which indent the surrounded text and place it on a line of its own.
+
+=== visual mode
+   "s" and "S"
+     using "S" instead of "s" instead skips
+
+== Example:
+  (123+4*56)/2          ds)        123+456/2
+  (123+4*56)/2          cs)[       [ 123+456 ]/2
+  <div>Yo!*</div>       cst<p>     <p>Yo!</p>
+  Hello w*orld!         ysiw)      Hello (world)! ( 'iw' choose one word)
