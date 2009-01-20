@@ -1,0 +1,10 @@
+= BufExplorer
+
+  To start exploring in the current window, use:
+     \be   OR  :BufExplorer
+  To start exploring in a newly split horizontal window, use:
+     \bs  or  :HSBufExplorer
+  To start exploring in a newly split vertical window, use:
+     \bv  or  :VSBufExplorer
+
+  <F1> help
