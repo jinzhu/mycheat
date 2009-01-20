@@ -1,0 +1,24 @@
+# vi:ft=cheat.help
+= Align:
+  :[range]Align [list-of-separators]
+  :[range]Align! [alignment-control-string] [list-of-separators]
+
+== FIELD JUSTIFICATION:
+  l  left justify   Justification styles are always    
+  r  right justify  cyclic (ie. lrc would mean left j.,
+  c  center         then right j., then center, repeat.
+  -  skip this separator                               
+  +  re-use last justification method                  
+  :  treat rest of text as a field                     
+
+== SELECTIVE APPLICATION:
+  :AlignCtrl g pattern
+    Align will only consider those lines which have the given pattern.
+  :AlignCtrl v pattern
+    Align will only consider those lines without the given pattern.  As an
+
+  e.g:
+    :AlignCtrl "Ilp1P1=" '='
+    :AlignCtrl p102P0
+    :%Align! p1P2 =
+    :%Align  =
