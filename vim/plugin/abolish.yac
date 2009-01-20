@@ -1,0 +1,9 @@
+= Abolish:
+ :%S/box{,es}/bag{,s}/g
+
+
+ I: Disable case variations (box, Box, BOX)
+ v: Match inside variable names (match my_box, myBox, but not mybox)
+ w: Match whole words (like surrounding with \< and \>)
+
+  e.g: :S?box{,es,ed,ing}?we
