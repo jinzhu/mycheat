@@ -1,0 +1,23 @@
+# vi:ft=cheat.help
+= VCSCommand:
+
+  <Leader>ca VCSAdd
+  <Leader>cn VCSAnnotate
+  <Leader>cc VCSCommit
+  <Leader>cD VCSDelete
+  <Leader>cd VCSDiff
+  <Leader>cg VCSGotoOriginal
+  <Leader>cG VCSGotoOriginal!
+  <Leader>ci VCSInfo
+  <Leader>cl VCSLog
+  <Leader>cL VCSLock
+  <Leader>cr VCSReview
+  <Leader>cs VCSStatus
+  <Leader>cu VCSUpdate
+  <Leader>cU VCSUnlock
+  <Leader>cv VCSVimDiff
+
+  # map q to quit
+  augroup VCSCommand
+    au User VCSBufferCreated silent! nmap <unique> <buffer> q :bwipeout<cr>
+  end
