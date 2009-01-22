@@ -1,0 +1,40 @@
+= Factory_Girl:
+== Install:
+  $ sudo gem install thoughtbot-factory_girl --source http://gems.github.com 
+
+  Rails:
+  config.gem "thoughtbot-factory_girl",
+              :lib    => "factory_girl",
+              :source => "http://gems.github.com"
+
+== Document:
+=== Define:
+  Factory.define :admin, :class => User do |u|
+    u.first_name 'Admin'
+    u.last_name  'User'
+    u.admin      true
+    u.activation_code { User.generate_activation_code }
+    u.email {|a| "#{a.first_name}.#{a.last_name}@example.com".downcase }
+  end
+
+  Factory(:user, :last_name => 'Doe').email
+
+=== Association
+  Factory.define :post do |p|
+    p.author {|a| a.association(:user) }
+  end
+
+  Factory.define :post do |p|
+    p.association :author, :factory => :user
+  end
+
+  post  = Factory(:post)       # =>  post.new_record?  # => false
+  post  = Factory.build(:post) # =>  post.new_record?  # => true
+  attrs = Factory.attributes_for(:user)
+
+=== Sequences:
+  Factory.sequence :email do |n|
+    "person#{n}@example.com"
+  end
+
+  Factory.next :email          # => "person1@example.com"
