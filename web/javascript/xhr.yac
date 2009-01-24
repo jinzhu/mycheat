@@ -1,0 +1,32 @@
+# vi: ft=cheat.javascript
+= XHR:
+== A XHR instance:
+  var xhr;
+  if (window.XMLHttpRequest) {
+    xhr = new XMLHttpRequest();
+  }
+  else if (window.ActiveXObject) {
+    xhr = new ActiveXObject("Msxml2.XMLHTTP");
+  }
+  else {
+    throw new Error("Ajax is not supported by this browser");
+  }
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        document.getElementById('someContainer')
+          .innerHTML = xhr.responseText;
+      }
+    }
+  }
+
+  xhr.open('GET','/serverResource');
+  xhr.send();
+
+== readyState:
+  0—Uninitialized
+  1—Loading
+  2—Loaded
+  3—Interactive
+  4—Complete
