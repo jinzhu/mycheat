@@ -1,0 +1,12 @@
+# vi: ft=cheat.javascript
+= setTimeout clearTimeout:
+
+  <script language="JavaScript">
+    function hello() {
+      window.alert("Hello");
+      window.setTimeout(hello(),5000);
+    }
+    var myTimeout = window.setTimeout(hello(),5000);
+
+    window.clearTimeout(myTimeout);
+  </script>
