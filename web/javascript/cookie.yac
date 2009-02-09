@@ -111,7 +111,8 @@ function DeleteCookie (name,path,domain) {
 //
 var expdate = new Date ();
 FixCookieDate (expdate); // Correct for Mac date bug (call only once)
-expdate.setMonth(expireDate. getMonth()+6);
+expdate.setMonth(expdate.getMonth()+6);
+expdate.setTime (expdate.getTime() + (24 * 60 * 60 * 1000)); // 24 hrs
 
 SetCookie ("ubiquitous", "This cookie",null,"/");
 document.write (document.cookie + "<br>");
