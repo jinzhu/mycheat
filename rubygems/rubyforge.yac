@@ -1,0 +1,6 @@
+= RubyForge
+  $ rubyforge setup
+  $ rubyforge config
+  $ rake config_hoe
+  $ rake manifest
+  $ rake release  VERSION=0.1.0 
