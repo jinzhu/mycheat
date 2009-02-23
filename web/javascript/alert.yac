@@ -1,0 +1,58 @@
+# vi:ft=cheat.javascript
+= Alert:
+  function sAlert(str){
+    var msgw=400;
+    var msgh=100;
+    var titleheight=25;
+    var bordercolor="#336699";
+    var titlecolor="#99CCFF";
+
+    var sWidth=document.body.offsetWidth;
+    var sHeight=document.body.offsetHeight;
+
+    if (sHeight<screen.height) { sHeight=screen.height;}
+
+    var bgObj=document.createElement("div");
+    bgObj.setAttribute('id','msgBox');
+    bgObj.style.position="fixed";
+    bgObj.style.position="fixed";
+    bgObj.style.top="0";
+    bgObj.style.width=sWidth + "px";
+    bgObj.style.height=sHeight + "px";
+    bgObj.style.background="#777";
+    bgObj.style.opacity="0.6";
+    bgObj.style.zIndex = "10000";
+
+    var msgObj=document.createElement("div");
+    msgObj.style.background="white";
+    msgObj.style.border="1px solid " + bordercolor;
+    msgObj.style.margin = "auto" ;
+    msgObj.style.width = msgw + "px";
+    msgObj.style.height =msgh + "px";
+    msgObj.style.textAlign = "center";
+    msgObj.style.lineHeight = (msgh-titleheight) + "px";
+
+    var title=document.createElement("h4");
+    title.style.background=bordercolor;
+    title.style.opacity="0.75";
+    title.style.border="1px solid " + bordercolor;
+    title.style.height="18px";
+    title.style.font="12px Verdana, Geneva, Arial, Helvetica, sans-serif";
+    title.style.textAlign="right";
+    title.style.color="white";
+    title.style.cursor="pointer";
+    title.innerHTML="X";
+    title.onclick=function(){
+      document.body.removeChild(bgObj);
+    }
+
+    var txt=document.createElement("p");
+    txt.style.margin="auto";
+    txt.style.color="#000";
+    txt.innerHTML=str;
+
+    msgObj.appendChild(title);
+    msgObj.appendChild(txt);
+    bgObj.appendChild(msgObj);
+    document.body.appendChild(bgObj);
+  }
