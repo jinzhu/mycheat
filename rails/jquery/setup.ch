@@ -1,3 +1,4 @@
+# vi:ft=cheat.javascript.jquery
 = JQuery Setup:
 == Respond_to:
 
@@ -21,10 +22,30 @@
 == SubmitWithAjax:
 
   jQuery.fn.submitWithAjax = function() {
-    this.submit(function() {
-        $.post($(this).attr('action'),$(this).serialize(),null,"script");
-        return false;
-        })
+  this.submit(function() {
+      $.ajax({
+        url: $(this).attr('action'),
+        type: "POST",
+        data: $(this).serialize(),
+        dataType: 'script',
+        timeout: 15000,
+        });
+      return false;
+      });
   };
 
   $('#form').submitWithAjax();
+
+== ajaxUpdate:
+  $.fn.ajaxUpdate = function() {
+    $(this).click(function(){
+        if (confirm('Are you sure?')) {
+        $.ajax({
+          url: this.href,
+          type: this.getAttribute('ajaxmethod') || "PUT",
+          data: 'name='+ this.name + '&authenticity_token=' + encodeURIComponent(AUTH_TOKEN),
+          dataType: 'script',
+          });
+        return false;
+        }});
+  };
