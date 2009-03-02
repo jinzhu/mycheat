@@ -1,7 +1,10 @@
 = NetWork:
 == All System:
+=== Static
   $ sudo ifconfig eth0 192.168.201.13 netmask 255.255.255.0
   $ sudo route add default gw 192.168.201.1 eth0
+=== Dhcp
+  $ dhcpcd <interface>
 
 == Net Status:
   $ netstat
