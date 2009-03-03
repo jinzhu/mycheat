@@ -1,0 +1,9 @@
+= GIT-SVN:
+== Import "svn checkout"
+  $ git svn clone --username your-name -s project-svn-repo
+
+== Update   "svn update"
+  $ git svn rebase   
+
+== Export   "svn commit"
+  $ git svn dcommit
