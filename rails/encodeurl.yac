@@ -1,0 +1,31 @@
+# vi:ft=ruby.cheat
+= Encode URl:
+
+  def encrypt_string(string_to_encrypt)
+    require 'openssl'
+    require 'digest/sha1'
+    require 'base64'
+    c = OpenSSL::Cipher::Cipher.new("aes-128-cbc")
+    c.encrypt 
+    c.key = Digest::SHA1.hexdigest(get_password) 
+    e = c.update(string_to_encrypt)
+    e << c.final  
+    require 'cgi'  
+    CGI.escape Base64.encode64(e) 
+  end
+  
+  def decrypt_string(string_to_decrypt)
+    require 'openssl'
+    require 'digest/sha1'
+    require 'base64' 
+    key = Digest::SHA1.hexdigest(get_password) 
+    require 'cgi'  
+    string_to_decrypt = CGI.unescape(string_to_decrypt) unless unescaped?(string_to_decrypt)
+    dd = Base64.decode64(string_to_decrypt) 
+    c = OpenSSL::Cipher::Cipher.new("aes-128-cbc")
+    c.decrypt
+    c.key = key 
+    d = c.update(dd)
+    d << c.final
+    d 
+  end
