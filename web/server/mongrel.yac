@@ -1,0 +1,9 @@
+= Mongrel:
+== Configure:
+  $ mongrel_rails  cluster::configure -h
+
+  $ mongrel_rails cluster::configure -e production -p 8000 -N 3 -c /path -a 127.0.0.1 
+
+== Start/Stop:
+  $ mongrel_rails cluster::start
+  $ mongrel_rails cluster::stop 
