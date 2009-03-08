@@ -71,3 +71,33 @@ DefaultType text/plain
 ServerName 127.0.0.1
 ServerAdmin you@example.com
 DocumentRoot "/var/www"
+
+
+NameVirtualHost *:80
+
+<Proxy balancer://mongrel_cluster>
+  BalancerMember http://127.0.0.1:8000
+  BalancerMember http://127.0.0.1:8001
+  BalancerMember http://127.0.0.1:8002
+</Proxy>
+
+<VirtualHost *:80>
+  ServerAdmin admin@admin.com
+  ServerName www.xxx.com
+  ServerAlias www.xxx.com
+  DocumentRoot /path
+
+  <Directory '/path'>
+    Options FollowSymLinks
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  ProxyPass / balancer://mongrel_cluster/
+  ProxyPassReverse / balancer://mongrel_cluster/
+
+  ProxyRequests Off
+  RewriteEngine On
+  RewriteRule ^/$ /index.html [QSA]
+</VirtualHost> 
