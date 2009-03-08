@@ -1,0 +1,19 @@
+= Expire Headers:
+== Apache:
+  <ifmodule mod_expires.c>
+    <filesmatch "\.(jpg|gif|png|css|js)$">
+         ExpiresActive on
+         ExpiresDefault "access plus 1 year"
+     </filesmatch>
+  </ifmodule>
+
+== lighttpd:
+  $HTTP["url"] =~ "\.(jpg|gif|png|css|js)$" {
+       expire.url = ( "" => "access 1 hours" )
+  }
+
+== Nginx:
+  if ($request_uri ~* "\.(ico|css|js|gif|jpe?g|png)\?[0-9]+$") {
+      expires max;
+      break;
+  }
