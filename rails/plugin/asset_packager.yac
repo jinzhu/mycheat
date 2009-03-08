@@ -1,0 +1,13 @@
+= Assert Packager
+== Install:
+  ./script/plugin install git://github.com/sbecker/asset_packager
+
+== Rake:
+  rake asset:packager:create_yml
+  rake asset:packager:build_all
+  rake asset:packager:delete_all
+
+== Helper:
+  <%= javascript_include_merged :base %>
+  <%= stylesheet_link_merged :base %>
+  <%= stylesheet_link_merged :secondary, 'media' => 'print' %>
