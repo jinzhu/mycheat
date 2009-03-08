@@ -7,3 +7,5 @@
 == Start/Stop:
   $ mongrel_rails cluster::start
   $ mongrel_rails cluster::stop 
+
+  $ sudo kill -9 $(ps aux | grep mongrel | awk {'print $2'})
