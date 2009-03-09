@@ -1,0 +1,4 @@
+= SVN ignore:
+ $ EDITOR=vim
+ $ export EDITOR
+ $ svn propset svn:ignore --file ignore_file . 
