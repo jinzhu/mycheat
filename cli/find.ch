@@ -1,12 +1,12 @@
 = find: |-
 == To search current directory and sub directories for a specific file:
   $ find . -name "rc.conf" -print
-  $ find . -iname "rc.conf" -print           Same, but case insensitive:
-  $ find . -iname '*.mpg' -o -iname '*.avi'  Search for both mpg & avi:
-  $ find . -type f -name "rc.conf" -print    Same, but files only:
-  $ find . -ctime -1 -type f                 To find files changed in the last 1 day
-  $ find /tmp -size 1M -type f               To find files larger than 1 Mb in /tmp
-  $ find ~/src -newer main.css               To find files newer than main.css in ~/src
+  $ find . -iname "rc.conf" -print          Same, but case insensitive:
+  $ find . -iname '*.mpg' -o -iname '*.avi' Search for both mpg & avi:
+  $ find . -type f -name "rc.conf" -print   Same, but files only:
+  $ find . -ctime -1 -type f -maxdepth 1    To find files changed in the last 1 day
+  $ find /tmp -size 1M -type f              To find files larger than 1 Mb in /tmp
+  $ find ~/src -newer main.css              To find files newer than main.css in ~/src
   $ find -iwholename '/home/*/hello' -not -iwholename '*.git'
   
   
