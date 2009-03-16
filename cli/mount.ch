@@ -11,6 +11,12 @@ E.g:
   $ sudo mount -t vfat -o utf8 /dev/sdb /mnt/disk
   $ sudo mount -t ntfs /dev/sdb /mnt -o charset=utf8,umask=022
 
+== Mount NFS
+  # /etc/exports
+    //home/test      192.168.0.0/24(rw,async,no_root_squash)
+  service nfs start
+  $ mount -t nfs 10.1.1.2:/home/test /mnt/nfs 
+
 == Umount:
   $ umount /dev/hda2
      unmount disk called hda2 - exit from mount point '/ mnt/hda2' first
