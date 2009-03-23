@@ -52,3 +52,5 @@
    $ chkconfig --list | grep on    # 列出所有启动的系统服务程序
    $ rpm -qa                # 查看所有安装的软件包
    $ history | awk {'print $2'} | sort | uniq -c | sort -k1 -rn|head
+
+   $ sync && sudo bash -c "echo 2 > /proc/sys/vm/drop_caches" 同步硬盘内存,清空内存缓存
