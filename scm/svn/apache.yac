@@ -1,0 +1,10 @@
+= SVN Apache Server:
+  apache apr apr-util neon sqlite
+
+  http://httpd.apache.org/download.cgi
+  http://www.webdav.org/neon/
+  http://www.sqlite.org/download.html
+
+== Install:
+  $ ./configure --prefix=/usr/local/subversion --with-apxs=/usr/local/apache2/bin/apxs --with-apr=/usr/local/apr/ --with-apr-util=/usr/local/apr-util/ --with-sqlite=/usr/local/sqlite3 --with-neon=/usr/local/neon/ --with-ssl
+  $ make && make install
