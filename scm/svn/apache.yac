@@ -8,3 +8,26 @@
 == Install:
   $ ./configure --prefix=/usr/local/subversion --with-apxs=/usr/local/apache2/bin/apxs --with-apr=/usr/local/apr/ --with-apr-util=/usr/local/apr-util/ --with-sqlite=/usr/local/sqlite3 --with-neon=/usr/local/neon/ --with-ssl
   $ make && make install
+
+== Configure:
+<VirtualHost *:80>
+ ServerName svn.alixueyuan.org
+ ServerAlias svn.ali-dev.com 
+ 
+ #SSLEngine On 
+ #SSLCertificateFile /usr/local/apache2/conf/server.crt
+ #SSLCertificateKeyFile /usr/local/apache2/conf/server.key
+
+ <Location /renzheng>
+  DAV svn
+  SVNPath /home/svn/renzheng
+  AuthType Basic
+  AuthName "svn repos renzheng"
+  AuthUserFile /home/svn/renzheng/.pass
+  AuthzSVNAccessFile /home/svn/renzheng/conf/authz
+  Satisfy Any
+  Require valid-user
+ </Location>
+
+  CustomLog logs/svn-access_log combined
+</VirtualHost>
