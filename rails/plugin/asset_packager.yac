@@ -1,4 +1,4 @@
-= Assert Packager
+= Asset Packager
 == Install:
   ./script/plugin install git://github.com/sbecker/asset_packager
 
