@@ -1,0 +1,6 @@
+= Iconv:
+  iconv -f UTF-8 -t GBK -o foo.gbk foo.utf8
+
+== Ruby:
+  require 'iconv'
+  Iconv.conv('gbk','utf-8','UTF8编码')
