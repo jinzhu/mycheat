@@ -27,6 +27,7 @@
 
 == Don't generate Ri and RDoc when installing gems:
   $ gem install [gem name] --no-ri --no-rdoc
+  $ sudo gem install mysql -- --with-mysql-config=/usr/bin/mysql_config
 
   to set this as default behavior:
 
