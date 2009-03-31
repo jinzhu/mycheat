@@ -1,5 +1,5 @@
 = SVN Apache Server:
-  apache apr apr-util neon sqlite
+  apache apr apr-util neon sqlite ( ./configure --disable-tcl )
 
   http://httpd.apache.org/download.cgi
   http://www.webdav.org/neon/
