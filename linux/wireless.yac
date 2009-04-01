@@ -1,0 +1,30 @@
+= Wireless:
+  $ ifconfig wlan0 up
+
+  $ iwlist wlan0 scan
+
+== No encryption 
+  $ iwconfig wlan0 essid "MyEssid"
+
+== WEP 
+=== using an hexadecimal key:
+  $ iwconfig wlan0 essid "MyEssid" key 1234567890
+
+=== using an ascii key:
+  $ iwconfig wlan0 essid "MyEssid" key s:asciikey
+
+== WPA/WPA2 
+You need to edit the /etc/wpa_supplicant.conf file as described in WPA_Supplicant. Then, issue this command:
+  $ wpa_supplicant -B -Dwext -i wlan0 -c /etc/wpa_supplicant.conf
+
+== Work :)
+  $ dhcpcd wlan0
+
+  $ ifconfig wlan0 192.168.0.2
+  $ route add default gw 192.168.0.1
+
+== Driver
+  $ ndiswrapper -i filename.inf
+  $ ndiswrapper -l
+  $ ndiswrapper -m
+  $ depmod -a
