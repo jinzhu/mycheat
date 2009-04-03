@@ -28,6 +28,8 @@
 == Don't generate Ri and RDoc when installing gems:
   $ gem install [gem name] --no-ri --no-rdoc
   $ sudo gem install mysql -- --with-mysql-config=/usr/bin/mysql_config
+  .bashrc
+  < export LD_LIBRARY_PATH=/usr/local/mysql5/lib/mysql:$LD_LIBRARY_PATH >
 
   to set this as default behavior:
 
