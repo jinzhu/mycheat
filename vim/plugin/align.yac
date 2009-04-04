@@ -20,5 +20,6 @@
   e.g:
     :AlignCtrl "Ilp1P1=" '='
     :AlignCtrl p102P0
-    :%Align! p1P2 =
+    :%Align! p1P2 =        # left 1 space,right 2 space
     :%Align  =
+    :%Align  =\w\+
