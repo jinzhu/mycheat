@@ -16,6 +16,8 @@ Search for all opened instances of directory /tmp and all the files and director
 List all opened internet sockets and sockets related to port 80:
   $ lsof -i
   $ lsof -i :80
+-nP options to lsof to show listening ports without lookups on hostnames and services.
+  $ lsof -i -nP | grep ^httpd
 Show only TCP (works the same for UDP)
   $ lsof -iTCP
 Show connections based on the host and the port using @host:port
