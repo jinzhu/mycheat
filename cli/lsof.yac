@@ -1,0 +1,33 @@
+= lsof
+Show us what files are opened by processes whose names starts by "k"
+  $ lsof -c k
+
+Show us the processes opened by user apache and user zahn:
+  $ lsof -u apache,zahn
+
+Show us what files are using the process whose PID is 30297:
+  $ lsof +p 30297 
+The -p switch lets you see what a given process ID has open:
+  $ lsof -p 10075 
+
+Search for all opened instances of directory /tmp and all the files and directories it contains:
+  $ lsof +D /tmp 
+
+List all opened internet sockets and sockets related to port 80:
+  $ lsof -i
+  $ lsof -i :80
+Show only TCP (works the same for UDP)
+  $ lsof -iTCP
+Show connections based on the host and the port using @host:port
+  $ lsof -i@192.168.1.5:22 
+List all opened Internet and UNIX domain files:
+  $ lsof -i -U
+
+Show us what process(es) has an UDP connection opened to or from the host www.akadia.com at port 123 (ntp):
+  $ lsof -iUDP@www.akadia.com:123 
+
+lsof +L1 shows you all open files that have a link count less than 1, often indicative of a cracker trying to hide something
+  $ lsof +L1 
+
+The -t option returns just a PID
+  $ lsof -t -c Mail => 350
