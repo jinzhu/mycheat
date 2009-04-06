@@ -1,6 +1,5 @@
 = Git:
 == Info
-
   git diff
     show a diff of the changes made since your last commit
 
@@ -247,8 +246,7 @@
     show the contents of a stash - accepts all diff args
 
 == Remotes
-
-  git remote add <branch> <remote branch>
+  $ git remote add <branch> <remote branch>
     adds a remote repository to your git config.  Can be then fetched locally.
 
     Example: 
@@ -256,28 +254,19 @@
       git remote add coreteam git://github.com/wycats/merb-plugins.git
       git fetch coreteam
 
-  git push {repository} :heads/{branch}
+  $ git push {repository} :heads/{branch}
     Delete a remote repository
 
-  git remote prune {repository}
+  $ git remote prune {repository}
     Prune deleted remote repositories from git branch listing
 
 
-== Environment Variables
-  ---------------------
-
-  GIT_AUTHOR_NAME, GIT_COMMITTER_NAME 
-    Your full name to be recorded in any newly created commits.  Overrides
-    user.name in .git/config
-
-  GIT_AUTHOR_EMAIL, GIT_COMMITTER_EMAIL 
-    Your email address to be recorded in any newly created commits.  Overrides
-    user.email in .git/config
-
-
 == Git Submodules
-  --------------
-  git submodule add <remote repo> <path/to/submodule>
+  $ git submodule add <remote repo> <path/to/submodule>
 
-  git submodule init
-  git submodule update
+  $ git submodule init
+  $ git submodule update
+
+== New Repo
+  $ git remote add origin git@YOUR_SERVER:myrailsapp.git
+  $ git push origin master:refs/heads/master
