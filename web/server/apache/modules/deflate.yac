@@ -1,0 +1,15 @@
+= mod_gzip / deflate:
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/javascript text/css application/x-javascript
+
+  SetOutputFilter DEFLATE
+  SetEnvIfNoCase Request_URI  \.(?:gif|jpe?g|png)$    no-gzip dont-vary
+  SetEnvIfNoCase Request_URI  \.(?:exe|t?gz|zip|bz2|sit|rar)$    no-gzip dont-vary
+  SetEnvIfNoCase Request_URI  \.pdf$  no-gzip dont-vary
+
+
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzipL
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
