@@ -25,7 +25,7 @@ AddType application/x-httpd-php-source phps
 </IfModule>
 
 <Directory />
-  Options Includes Indexes FollowSymLinks MultiViews
+  Options Includes Indexes FollowSymLinks MultiViews    # list files
   AllowOverride FileInfo
   Order allow,deny
   Allow from all
