@@ -1,4 +1,10 @@
 = cron: |-
+== Global variables ( /etc/crontab )
+  SHELL=/bin/bash
+  PATH=/sbin:/bin:/usr/sbin:/usr/bin
+  MAILTO=root
+  HOME=/
+
 == To edit the crontab of the current user:
   $ crontab -e
   
