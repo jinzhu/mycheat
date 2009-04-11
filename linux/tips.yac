@@ -1,3 +1,4 @@
 = Linux Tips:
   Ctrl + s  : stop screen scrolling
   Ctrl + q  : resume screen output
+  $ sudo chsh -s zsh mvp
