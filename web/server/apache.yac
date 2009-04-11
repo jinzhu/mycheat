@@ -4,6 +4,8 @@
 == Configure:
 
 Listen 80
+# can listen 2 port
+Listen 81
 
 # PHP
 LoadModule php5_module        modules/libphp5.so
