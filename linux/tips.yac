@@ -3,7 +3,7 @@
   Ctrl + q  : resume screen output
 
   $ sudo chsh -s zsh mvp  #may be change /etc/passwd zsh => /bin/zsh by hand
-  $ echo password | sudo halt
+  $ echo password | sudo -S halt
 
   while true; do
     sleep 60;
