@@ -1,4 +1,11 @@
 = Linux Tips:
   Ctrl + s  : stop screen scrolling
   Ctrl + q  : resume screen output
+
   $ sudo chsh -s zsh mvp  #may be change /etc/passwd zsh => /bin/zsh by hand
+  $ echo password | sudo halt
+
+  while true; do
+    sleep 60;
+    [ "$(md5sum a | awk {'print $1'})" = '文件的MD5码' ] && (echo password | sudo halt);
+  done 
