@@ -1,8 +1,9 @@
 = Nginx:
-user  ez ez;
+user  www-data www-data;
 worker_processes  2;
 
-error_log  logs/error.log notice;
+error_log  logs/error.log debug;
+
 pid        logs/nginx.pid;
 
 events {
@@ -12,6 +13,12 @@ events {
 http {
     include       conf/mime.types;
     default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] $status '
+                      '"$request" $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "http_x_forwarded_for"';
+
+    access_log  logs/access.log  main;
 
     # no sendfile on OSX uncomment 
     #this if your on linux or bsd
@@ -34,8 +41,8 @@ http {
 
     server {
         listen       80;
-        #server_name  localhost;
-        root /Users/ez/nginx/public;
+        server_name  some-server.com www.server-name.com;
+        root /var/www/nginx/public;
 
         access_log  off;
         rewrite_log on;
@@ -55,11 +62,11 @@ http {
         }
 
         location ~ .html {
-           root /Users/ez/nginx/public;
+           root /var/www/nginx/public;
         }
 
-           location ~* ^.+\.(jpg|jpeg|gif|png|ico|css|zip|tgz|gz|rar|bz2|doc|xls|exe|pdf|ppt|txt|tar|mid|midi|wav|bmp|rtf|js|mov)$ {
-          root /Users/ez/nginx/public;
+        location ~* ^.+\.(jpg|jpeg|gif|png|ico|css|zip|tgz|gz|rar|bz2|doc|xls|exe|pdf|ppt|txt|tar|mid|midi|wav|bmp|rtf|js|mov)$ {
+          root /var/www/nginx/public;
         }
 
         error_page   500 502 503 504  /50x.html;
