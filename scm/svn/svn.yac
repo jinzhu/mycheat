@@ -1,0 +1,3 @@
+= SVN:
+== Add svn user:
+  $ htpasswd .pass wosmvp 
