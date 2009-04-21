@@ -5,6 +5,9 @@
 == register:
   $ /msg NickServ REGISTER password e-mail
 
+== nickname
+  $ /nick new_nickname
+
 == File Transfer:
   # Sent DCC SEND request to buddy
   $ /DCC SEND buddy foo.jpg
