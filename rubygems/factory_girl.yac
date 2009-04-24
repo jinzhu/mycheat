@@ -38,3 +38,7 @@
   end
 
   Factory.next :email          # => "person1@example.com"
+
+== Test Helper
+  require File.expand_path(File.dirname(__FILE__) + "/factories")
+
