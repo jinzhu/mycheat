@@ -1,0 +1,3 @@
+= Heroku
+== Import database
+  heroku db:push 'mysql://root:pass@localhost/web_development?encoding=utf8'
