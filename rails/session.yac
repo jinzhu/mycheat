@@ -1,0 +1,12 @@
+# vi:ft=cheat.ruby
+= Session:
+== Rails > 2.3
+  result = ActiveRecord::Base.connection.execute "select * from sessions where session_id = '6bcd066593afca6aa509dccf6c4ac4c9'"
+
+  data = []
+  result.each_hash{ |res| data << res }
+
+  Marshal.load(ActiveSupport::Base64.decode64(data[0]['data']))
+
+== Rails < 2.3
+  @user = CGI::Session::ActiveRecordStore::Session.find_by_session_id(@session_id).data
