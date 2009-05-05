@@ -1,0 +1,8 @@
+= RabbitMQ
+== Install:
+  Download: (rabbitmq-server-generic-unix)
+    http://www.rabbitmq.com/server.html 
+
+  Extract `rabbitmq_server-version` into /usr/lib/erlang/lib
+
+  $ sudo rabbitmq-server
