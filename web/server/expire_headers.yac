@@ -12,6 +12,10 @@
        expire.url = ( "" => "access 1 hours" )
   }
 
+  $HTTP["url"] =~ "^/images/" {
+       expire.url = ( "" => "access 1 hours" )
+  }
+
 == Nginx:
   if ($request_uri ~* "\.(ico|css|js|gif|jpe?g|png)\?[0-9]+$") {
       expires max;
