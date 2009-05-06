@@ -1,4 +1,5 @@
 = System Information:
+   $ lspci                  # show system info
    $ arch                   # show architecture of machine
    $ uname -a               # display kernel cpu system information
    $ head -n 1 /etc/issue   # display Operate System version 
