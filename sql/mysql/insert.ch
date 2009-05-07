@@ -1,6 +1,8 @@
 = mysql_insert: |-
   Name: 'INSERT'
 == Description:
+   LOAD DATA INFILE '/home/mysql/megagame_production/taobao.txt'  into table tbaccounts(username,password)
+
 == Syntax:
   INSERT [LOW_PRIORITY | DELAYED | HIGH_PRIORITY] [IGNORE]
       [INTO] tbl_name [(col_name,...)]
