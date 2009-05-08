@@ -1,2 +1,3 @@
 = Sed
   $ sed 's/\(|[^|]*\)\{4\}\w$/ /' filename
+  $ sed 's/\(\w\+\):\(\w\+\).*/\1 \2/' filename
