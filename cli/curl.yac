@@ -1,0 +1,24 @@
+= Curl:
+== POST:
+  $ curl -d "birthyear=1905&press=%20OK%20" www.hotmail.com/when/junk.cgi
+
+== post a form with file upload:
+  $ curl -F upload=@localfilename -F press=OK [URL]
+
+== Put a file to a HTTP server with curl:
+  $ curl -T uploadfile www.uploadhttp.com/receive.cgi
+
+== HTTP Authentication
+  $ curl -u name:password www.secrets.com
+
+== User Agent
+  $ curl -A "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)" [URL]
+
+== To tell curl to follow a Location:
+  $ curl -L www.sitethatredirects.com
+
+== Cookies:
+  $ curl -b "name=Daniel" www.cookiesite.com
+
+== Server Info
+  $ curl -I www.google.com
