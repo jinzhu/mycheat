@@ -2,6 +2,7 @@
 == Info
   git diff
     show a diff of the changes made since your last commit
+    $ git diff master knowledge
 
   git status
     show files added to the index, files with changes, and untracked files
