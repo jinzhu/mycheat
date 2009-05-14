@@ -1,0 +1,11 @@
+# vi:ft=cheat.javascript
+= JavaScript Keycode:
+  <script type="text/javascript">
+  document.onkeydown = checkKeycode
+  function checkKeycode(e) {
+    var keycode;
+    if (window.event) keycode = window.event.keyCode;
+    else if (e) keycode = e.which;
+    alert("keycode: " + keycode);
+  }
+  </script>
