@@ -48,3 +48,6 @@
 
 === Configuring a network interface to load at boot time:
   $ rc-update add net.eth0 default
+
+== Change Mac Address:
+  $ ifconfig eth0 hw ether AA:BB:CC:DD:EE:FF
