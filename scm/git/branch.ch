@@ -1,4 +1,7 @@
 = Git Branch:
+== checkout branch
+  git checkout -b knowledge refs/remotes/origin/knowledge
+
 == Push your local branch
   $ git push origin master:branch
   $ git push origin <local branch name>:refs/heads/<remote branch name>
