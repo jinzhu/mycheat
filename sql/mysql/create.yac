@@ -1,0 +1,8 @@
+= Create Database:
+  CREATE TABLE `users` (
+    `id` int(11) NOT NULL auto_increment,
+    `login` varchar(255) default NULL,
+    `created_at` datetime default NULL,
+    `users_trains_count` int(11) default '0',
+    PRIMARY KEY  (`id`)
+  ) ENGINE=InnoDB AUTO_INCREMENT=24027 DEFAULT CHARSET=utf8;
