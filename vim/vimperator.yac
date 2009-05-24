@@ -1,0 +1,4 @@
+= Vimperator:
+  set go+=mTb
+
+  <C-V> + xxx  pass keypress to firefox
