@@ -7,6 +7,7 @@
   sudo make install
 
 == SendMail:
+  $ /etc/rc.d/postfix start  
   mail -s subject to-addr
     content
 
