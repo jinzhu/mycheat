@@ -1,0 +1,15 @@
+= Postfix:
+== Download:
+  http://www.postfix.org/download.html
+
+== Install:
+  make
+  sudo make install
+
+== SendMail:
+  mail -s subject to-addr
+    content
+
+=== Ruby
+  Pony.mail(:to => 'you@example.com', :from => 'me@example.com', :subject => 'hi', :body => 'Hello there.')
+
