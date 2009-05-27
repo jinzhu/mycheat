@@ -1,0 +1,17 @@
+= ReallySimpleHistory:
+  http://code.google.com/p/reallysimplehistory/
+
+== JQuery:
+  http://code.google.com/p/jquery-json/
+
+  window.dhtmlHistory.create( {
+    toJSON: function(o) { return $.toJSON(o); },
+    fromJSON: function(s) { return $.evalJSON(s); }
+  });
+
+  $(document).ready(function() {
+    if( dhtmlHistory.firstLoad ){ ajaxload(); }
+
+    dhtmlHistory.initialize();
+    dhtmlHistory.addListener(function(){ ajaxload() });
+  });
