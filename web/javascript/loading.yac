@@ -1,6 +1,9 @@
 # vim:ft=cheat.javascript
 = Ajax Loading:
+== Generate Image:
+  http://www.ajaxload.info/
 
+== Javascript:
   var sWidth=document.body.offsetWidth;
   var sHeight=document.body.offsetHeight;
   if (sHeight<screen.height) { sHeight=screen.height;}
