@@ -1,0 +1,16 @@
+= JQuery History:
+  http://www.mikage.to/jquery/jquery_history.html
+
+  function pageload(hash) {
+    if((/albums#?/).test(document.location.toString().split('/')[3])){
+      var url = document.location.toString().split('#')[1];
+      $.ajax({
+          url:  url ? url : '/albums',
+          dataType: 'script',
+       });
+    };
+  };
+
+  $(document).ready(function() {
+    $.historyInit(pageload);
+  })
