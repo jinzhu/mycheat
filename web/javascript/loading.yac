@@ -1,0 +1,29 @@
+# vim:ft=cheat.javascript
+= Ajax Loading:
+
+  var sWidth=document.body.offsetWidth;
+  var sHeight=document.body.offsetHeight;
+  if (sHeight<screen.height) { sHeight=screen.height;}
+
+  // loading
+  var loadingBg = document.createElement("div");
+  loadingBg.setAttribute('id','loading');
+  loadingBg.style.position   = "fixed";
+  loadingBg.style.top        = "0";
+  loadingBg.style.width      = sWidth + "px";
+  loadingBg.style.height     = sHeight + "px";
+  loadingBg.style.background = "#fff";
+  loadingBg.style.opacity    = "0.6";
+  loadingBg.style.zIndex     = "10000";
+  loadingBg.style.display    = "none";
+
+  var loadingImg =document.createElement("img");
+  loadingImg.src="/images/ajaxLoader.gif";
+  loadingImg.style.position   = "fixed";
+  loadingImg.style.left = (sWidth / 2  - 20) + 'px';
+  loadingImg.style.top  = (sHeight / 2 - 20) + 'px';
+  loadingBg.appendChild(loadingImg);
+  document.body.appendChild(loadingBg);
+
+  $("#loading").ajaxStart(function(){ $(this).show(); });
+  $("#loading").ajaxStop(function(){ $(this).hide(); }); 
