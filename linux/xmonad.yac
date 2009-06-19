@@ -1,26 +1,31 @@
 = Xmonad:
 
-Mod-Shift-Space
-Mod-Space
+  Mod-Enter       =>  Launch terminal
+  Mod-Shift-Enter =>  Swap the focused window and the master window
+  Mod-p           => Launch dmenu
 
-Mod-Enter
-Mod-P
+  Mod-0..9       =>   switch  to workspace N with mod-N
+  Mod-Shift-0..9 =>  move the current window to that screen
 
-Mod-j
-Mod-k
-Mod-Shift-j
-Mod-Shift-k
+  Mod-j       => Move focus to the next window
+  Mod-k       => Move focus to the previous window
+  Mod-Shift-j => Swap the focused window with the next window
+  Mod-Shift-k => Swap the focused window with the previous window
 
-Mod-h
-Mod-l
+  Mod-h  => Shrink the master area
+  Mod-l  => Expand the master area
 
-Mod-Q
-Mod-Shift-Q
+  Mod-q       => Restart Xmonad
+  Mod-Shift-q => Quit Xmonad
 
-Mod-Shift-C
+  Mod-Shift-C  => Close the focused window
 
-Mod-0..9
-Mod-Shift-0..9
 
-Mod-comma
-Mod-period
+  Mod-comma  => Increment the number of windows in the master area
+  Mod-period => Deincrement the number of windows  in  the  master area
+
+  Mod-Shift-Space => Rotate through the available layout algorithms
+  Mod-Space       => Reset the layouts on the current workspace to default
+
+  Mod-t           => Push window back into tiling
+  Mod-button1     => Set the window to floating mode and move by dragging
