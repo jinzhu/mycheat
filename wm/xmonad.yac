@@ -29,3 +29,7 @@
 
   Mod-t           => Push window back into tiling
   Mod-button1     => Set the window to floating mode and move by dragging
+
+  mod-{w,e,r}       => Switch to physical/Xinerama screens 1, 2, or 3
+  mod-shift-{w,e,r} => Move client to screen 1, 2, or 3
+
