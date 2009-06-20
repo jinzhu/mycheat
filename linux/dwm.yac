@@ -1,0 +1,26 @@
+= DWM:
+  Mod-Shift-Return  => Zooms/cycles  focused  window  to/from  master area (tiled layouts only)
+
+  Mod-Tab     => Toggles to the previously selected tags.
+  Mod-Space   => Toggles between current and previous layout
+  Mod-{t,f,m} => set {tiled,floating,monocle}layout.
+
+  Mod1-Control-Shift-[1..n] => Add/remove nth tag to/from focused window.
+  Mod1-Shift-0              => Apply all tags to focused window.
+
+  Mod-b          => togglebar
+
+  Mod-Enter      => Launch terminal
+  Mod-p          => Launch dmenu
+
+  Mod-0..9       => switch  to workspace N with mod-N
+  Mod-Shift-0..9 => move the current window to that screen
+
+  Mod-j          => Move focus to the next window
+  Mod-k          => Move focus to the previous window
+
+  Mod-h          => Shrink the master area
+  Mod-l          => Expand the master area
+
+  Mod-Shift-q    => Quit DWM
+  Mod-Shift-C    => Close the focused window
