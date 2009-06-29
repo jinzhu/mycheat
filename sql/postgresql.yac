@@ -13,3 +13,13 @@
   例如: 我要一次性导出table1, table2, table3, 可以这么来写:
 
   $ pg_dump -t table1 -t table2 -t table3 -F c -Z 9 databasename > abc.backup 
+
+== Creating a new PostgreSQL user
+  $ createuser --superuser robbyrussell -U postgres
+
+== Create a new database
+  $ createdb my_test_db
+  $ dropdb my_test_db
+
+== Installing PostgreSQL Libraries for Ruby
+ $ sudo gem install postgres
