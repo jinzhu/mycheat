@@ -8,7 +8,7 @@
 
   $ createdb newdatabase
   $ psql -d newdatabase -U postgres -f dump.sql
-  $ pg_restore -d newdatabase ~/dump.sql
+  $ pg_restore -c -U anatole -d joblet_dev ~/jobletdb_dump
 
   导具体表 
   例如: 我要一次性导出table1, table2, table3, 可以这么来写:
