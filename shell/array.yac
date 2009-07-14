@@ -1,0 +1,19 @@
+= Shell Array:
+  names=( Jennifer Tonya Anna Sadie )
+
+== The following expression evaluates into all values of the array:
+  ${names[@]}
+
+== iterate through this array one value at a time:
+  for name in ${names[@]}
+  do
+    echo $name
+    # other stuff on $name
+  done
+
+== loop through an array and know the numeric index of the array you are using:
+  for (( i = 0 ; i < ${#names[@]} ; i++ ))
+  do
+    echo ${names[$i]}
+    # yadda yadda
+  done
