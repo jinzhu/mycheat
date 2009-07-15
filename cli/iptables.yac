@@ -1,0 +1,25 @@
+= iptables:
+  -d, --destination , Destination specification.
+  -s, --source , Source specification.
+  -i, --in-interface name.
+  -o, --out-interface name.
+  -p, --protocol,tcp, udp, udplite, icmp, esp, ah, sctp or all.
+  -j, --jump target,This specifies the target of the rule.
+
+  $ iptables -L -n 
+  $ iptables -F -t mangle
+  $ iptables -P INPUT DROP
+
+  $ iptables -A INPUT -i eth0 -p tcp -s any/0 --sport 1024:65535 -d $FW_IP --dport 25 -j ACCEPT
+  $ iptables -A OUTPUT -o eth0 -p tcp -s $FW_IP --sport 1024:65535 -d any/0 --dport 22 -j ACCEPT 
+  $ iptables -t filter -A INPUT -i eth0 -p tcp --syn -j DROP
+
+  #allow 2 telnet connections per client host
+  $ iptables -A INPUT -p tcp --syn --dport 23 -m connlimit --connlimit-above 2 -j REJECT
+  $ iptables -A INPUT -p tcp  --syn  --dport  23  -m  connlimit  ! --connlimit-above 2 -j ACCEPT
+
+  $ iptables -A INPUT -p tcp  --syn  --dport  :23  -m  connlimit  ! --connlimit-above 2 -j ACCEPT
+
+== iptables-save,iptables-restore
+  $ iptables-save > iptables-script
+  $ iptables-restore iptables-script
