@@ -6,9 +6,9 @@
   -p, --protocol,tcp, udp, udplite, icmp, esp, ah, sctp or all.
   -j, --jump target,This specifies the target of the rule.
 
-  $ iptables -L -n 
-  $ iptables -F -t mangle
-  $ iptables -P INPUT DROP
+  $ iptables -L -n  # List all rules
+  $ iptables -F -t mangle (nat,filter,mangle,raw)
+  $ iptables -P INPUT DROP # Set the policy for the chain to the given target.
 
   $ iptables -A INPUT -i eth0 -p tcp -s any/0 --sport 1024:65535 -d $FW_IP --dport 25 -j ACCEPT
   $ iptables -A OUTPUT -o eth0 -p tcp -s $FW_IP --sport 1024:65535 -d any/0 --dport 22 -j ACCEPT 
