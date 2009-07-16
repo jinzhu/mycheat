@@ -1,0 +1,14 @@
+= netstat:
+  * -t : TCP port
+  * -u : UDP port
+  * -l : Show only listening sockets.
+  * -p : Show the PID and name of the program to which each socket / port belongs
+  * -n : No DNS lookup (speed up operation)
+  * -i : Interface
+
+  $ netstat -atpl
+
+  $ netstat -nat |grep 202.54.1.10 | awk '{print $6}' | sort | uniq -c | sort -n
+  Get List Of All Unique IP Address
+  $ netstat -nat | awk '{ print $5}' | cut -d: -f1 | sed -e '/^$/d' | uniq
+  $ netstat -atun | awk '{print $5}' | cut -d: -f1 | sed -e '/^$/d' |sort | uniq -c | sort -n
