@@ -1,0 +1,13 @@
+= RailRoad:
+  $ railroad -M | dot -Tsvg > models.svg
+    Model diagram in SVG format
+  $ railroad -C | neato -Tpng > controllers.png
+    Controller diagram in PNG format
+
+  $ railroad -o models.dot -M
+    Produces a models diagram to the file 'models.dot'
+  $ railroad -a -i -o full_models.dot -M
+    Models diagram with all classes showing inheritance relations
+  $ railroad -a -i -M | dot -Tsvg > models.svg
+  $ railroad -h
+    Shows usage help
