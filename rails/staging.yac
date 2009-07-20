@@ -1,0 +1,20 @@
+= Staging:
+== configure file:
+  # config/initializers/load_config.rb
+  APP_CONFIG = YAML.load_file("#{RAILS_ROOT}/config/config.yml")[RAILS_ENV]
+
+== environments:
+  config/environments/staging.rb
+
+== deploy:
+  $ sudo gem install capistrano-ext
+
+  set :stages, %w(staging production testing)
+  set :default_stage, "testing"
+  require 'capistrano/ext/multistage'
+
+  config/deploy/staging.rb
+  config/deploy/testing.rb
+
+  $ cap deploy (default testing)
+  $ cap testing deploy
