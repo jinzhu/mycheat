@@ -1,0 +1,6 @@
+= GIT undo:
+  $ git reflog
+  1a75c1d... HEAD@{0}: reset --hard HEAD^: updating HEAD
+  f6e5064... HEAD@{1}: commit: added file2
+
+  $ git reset --hard f6e5064
