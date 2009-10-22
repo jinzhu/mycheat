@@ -1,0 +1,6 @@
+= keyboard:
+== Function keys:
+  Temporarily
+    $ sudo bash -c 'echo 2 > /sys/module/hid_apple/parameters/fnmode'
+  With .conf file
+    $ sudo bash -c 'echo "options hid_apple fnmode=2" > /etc/modprobe.d/hid_apple.conf'
