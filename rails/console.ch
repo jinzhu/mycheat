@@ -12,14 +12,14 @@
   >> load "the_file_name.rb"
   
 == Using app object:
-  >> app.get '/stories/10002'
-  => 200
-  >> app.assigns(:story)
-  => #<Story:0x24aad0c ... >
-  >> app.path
-  => "/stories/10002" 
-  >> app.reset!
-  => nil
+  app.get '/stories/10002'
+  output = app.html_document.root.to_s
+  app.controller.params
+  app.session[:user_id]
+  app.cookies
+  app.response.redirect_url
+  app.xml_http_request "/store/add_to_cart", :id => 1
+  app.flash
   
 == Using helpers methods:
   >> helper.pluralize 2, "story" 
