@@ -23,7 +23,7 @@
 == Removing orphaned dependencies
   $ emerge --update --deep --newuse world
   $ emerge --depclean
-  $ revdep-rebuild   (gentoolkit)
+  $ revdep-rebuild
 
 == Pretending: --pretend (-p)
   $ emerge -p package
@@ -54,3 +54,12 @@
 
     Setting PORTAGE_BINHOST in /etc/make.conf
     PORTAGE_BINHOST="ftp://buildhost/gentoo"
+
+== Other
+   $ ACCEPT_KEYWORDS="~x86" emerge packagename
+   $ USE="alsa" emerge xmms
+
+
+
+== app-portage/gentoolkit
+  $ equery files alsa-lib | less
