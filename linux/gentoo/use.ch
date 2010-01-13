@@ -1,4 +1,7 @@
 = Use:
+== User-defined USE setting:
+  /etc/make.conf
+
 == System Globally Use:
   /etc/make.conf
     USE="-qt3 ..."
