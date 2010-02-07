@@ -1,0 +1,3 @@
+= Problems:
+  can't reboot/halt? no more processes left in this runlevel
+  $ sudo emerge sysvinit
