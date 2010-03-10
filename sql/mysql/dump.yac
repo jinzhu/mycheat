@@ -1,0 +1,2 @@
+= mysql dump
+  $ mysqldump -u root --socket /tmp/mysql.sock --lock_tables=0 -A > dump_all_mysql_databases.sql
