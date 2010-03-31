@@ -6,5 +6,5 @@
 
  $ replace "CHARSET=latin1" "CHARSET=utf8" "SET NAMES latin1" "SET NAMES utf8" < ~/Desktop/tmp.sql > ~/Desktop/utf8.sql
 
- $ mysql -p -e "CREATE DATABASE utf8 CHARACTER SET utf8 COLLATE utf8_icelandic_ci" -u root
+ $ mysql -p -e "CREATE DATABASE utf8 CHARACTER SET utf8 COLLATE utf8_unicode_ci" -u root
  $ mysql -u root --default-character-set=utf8  utf8 < ~/Desktop/utf8.sql 
