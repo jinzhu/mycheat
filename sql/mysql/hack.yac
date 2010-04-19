@@ -1,0 +1,11 @@
+== Hack MySQL:
+  $ sudo mysqld_safe --skip-grant-tables
+
+  $ mysql -uroot
+  　>use mysql
+　　>update user set password=password("new_pass") where user="root";
+　　>flush privileges;
+  
+  $ sudo /etc/init.d/mysql start
+  $ GRANT ALL PRIVILEGES ON `delonghi_production`.* TO 'delonghi'@'localhost';
+
