@@ -103,3 +103,6 @@ NameVirtualHost *:80
   RewriteEngine On
   RewriteRule ^/$ /index.html [QSA]
 </VirtualHost> 
+
+## Apache & SeLinux
+ chcon -R -t httpd_user_content_t  /home/files/ldap_www
