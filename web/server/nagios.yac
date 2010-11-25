@@ -1,0 +1,7 @@
+= Nagios
+
+=== Errors
+1, open_basedir restriction in effect
+  /etc/php/php.ini # add nagios's path to open_basedir
+2, Could not read object configuration data
+  the daemon isn't running
