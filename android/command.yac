@@ -10,3 +10,8 @@ $ ant release
 ## install
 $ emulator -avd avd-name
 $ adb install bin/HelloAndroid-debug.apk
+
+
+# Decompiler
+1, android-apktool
+2, jd-gui
