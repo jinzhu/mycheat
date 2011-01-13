@@ -3,3 +3,5 @@
   ALTER TABLE `hobsraid_users` ADD `email` varchar(50); 
   alter table table01 add column field04 date, add column field05 time;
 
+  show full columns from users;
+  alter table users convert to character set utf8;
