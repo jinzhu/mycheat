@@ -1,0 +1,17 @@
+# create
+$ android create project --target 1 --name HelloAndroid --path ./HelloAndroidAppProject --activity HelloAndroidAppActivity --package com.example.helloandroid
+
+$ android list avd
+
+## make
+$ ant debug
+$ ant release
+
+## install
+$ emulator -avd avd-name
+$ adb install bin/HelloAndroid-debug.apk
+
+
+# Decompiler
+1, android-apktool
+2, jd-gui
