@@ -5,3 +5,7 @@
 
   show full columns from users;
   alter table users convert to character set utf8;
+
+  delete from translations USING translations, translations as vtable WHERE (translations.id > vtable.id) AND (translations.`key`=vtable.`key`) AND (translations.locale=vtable.locale);
+
+  SELECT `key`,locale, count(*) FROM translations GROUP BY `key`,locale HAVING count(*) > 1;
