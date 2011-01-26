@@ -4,3 +4,10 @@
   alter table table01 add column field04 date, add column field05 time;
 
   select `key`, locale, count(*) as cnt from translations GROUP BY `key`, locale HAVING cnt > 1;
+
+  show full columns from users;
+  alter table users convert to character set utf8;
+
+  delete from translations USING translations, translations as vtable WHERE (translations.id > vtable.id) AND (translations.`key`=vtable.`key`) AND (translations.locale=vtable.locale);
+
+  select `key`, locale, count(*) as cnt from translations GROUP BY `key`, locale HAVING cnt > 1;
