@@ -1,0 +1,3 @@
+groovy:000> System.setProperty("socksProxyPort", '')
+groovy:000> System.setProperty("socksProxyHost", '')
+groovy:000> System.setProperty("socksNonProxyHosts", '*')
