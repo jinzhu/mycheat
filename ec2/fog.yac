@@ -1,0 +1,29 @@
+require 'fog'
+fog = Fog::Compute.new(
+  :provider => 'AWS',
+  :region=>'eu-west-1',
+  :aws_access_key_id => 'yyy',
+  :aws_secret_access_key => 'xxxx'
+)
+
+# start a server
+server = fog.servers.create(
+  :image_id=>'ami-311f2b45',
+  :flavor_id=>'t1.micro',
+  :key_name => 'pey-pair-name'
+)
+
+# wait for it to get online
+server.wait_for { print "."; ready? }
+
+# public address -> ec2-79-125-45-252.eu- west-1.compute.amazonaws.com -> ssh into it
+server.dns_name
+
+# instance id -> find it again
+fog.servers.get(server.id)
+
+# shutdown
+server.destroy
+Connect via ssh
+
+ssh -i KEY-PAIR.pem ubuntu@SERVER-DNS-NAME
