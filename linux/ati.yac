@@ -1,0 +1,5 @@
+= ATI
+$ sudo aticonfig --initial=dual-head --screen-layout=right -f
+$ sudo aticonfig --dtop=horizontal --overlay-on=1
+$ sudo aticonfig --resolution=0,1920x1080,1920x1080
+$ sudo aticonfig --xinerama=on
