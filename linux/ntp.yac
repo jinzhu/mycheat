@@ -1,0 +1,3 @@
+= ntp
+$ netselect -s 3 pool.ntp.org
+$ sudo ntpdate 218.75.4.130
