@@ -6,11 +6,14 @@
   $ tar zxf file.tgz
   $ tar jxf file.tar.bz2
   $ tar jxf file.tbz2
+  $ gunzip FileName.gz
+  $ gzip -d FileName.gz
 === Create archive:
   $ tar zcf file.tar.gz  [file]
   $ tar zcf file.tgz     [file]
   $ tar jcf file.tar.bz2 [file]
   $ tar jcf file.tbz2    [file]
+  $ gzip FileName
 
 == rar:
 === Extract:
