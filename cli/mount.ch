@@ -11,6 +11,8 @@ E.g:
   $ sudo mount -t vfat -o utf8 /dev/sdb /mnt/disk
   $ sudo mount -t ntfs /dev/sdb /mnt -o charset=utf8,umask=022
 
+  $ sudo mount --bind /mnt/productimages/ /mnt/upload/productimages
+
 == Mount NFS
   # /etc/exports
     //home/test      192.168.0.0/24(rw,async,no_root_squash)
