@@ -1,0 +1,28 @@
+= RDS
+
+== Download RDS Toolkit
+  http://s3.amazonaws.com/rds-downloads/RDSCli.zip ( http://aws.amazon.com/developertools/2928?_encoding=UTF8&jiveRedirect=1 )
+
+== Config
+  export EC2_PRIVATE_KEY=~/.ec2/pk-xxx.pem
+  export EC2_CERT=~/.ec2/cert-xxx.pem
+  export AMAZON_ACCESS_KEY_ID="xxxx"
+  export AMAZON_SECRET_ACCESS_KEY="xxxx"
+  export AMAZON_ACCOUNT_NUMBER="xxxx"
+  export AWS_ACCESS_KEY_ID=$AMAZON_ACCESS_KEY_ID
+  export AWS_SECRET_ACCESS_KEY=$AMAZON_SECRET_ACCESS_KEY
+  export AWS_RDS_HOME=/home/jinzhu/rds/RDSCli-1.4.006
+  export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
+  export EC2_REGION=ap-northeast-1
+
+== Create a new parameter group
+  $ rds-create-db-parameter-group peters-params -f mysql5.1 -d "peters params"
+
+== Modify the log_bin_trust_function_creators to be set to ON
+  $ rds-modify-db-parameter-group peters-params --parameters="name=log_bin_trust_function_creators, value=on, method=immediate"
+
+== Change your running db instance to use the new param group
+  $ rds-modify-db-instance petersdbinstance --db-parameter-group-name=peters-params
+
+== Restart the instance
+  $ rds-reboot-db-instance petersdbinstance
