@@ -1,0 +1,4 @@
+= JavaWs
+
+== Fix run JNLP application exception
+$ javaws -Xclearcache
