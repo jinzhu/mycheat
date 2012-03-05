@@ -1,5 +1,10 @@
 = MySQL latin1 -> UTF8:
 
+ $ SHOW FULL COLUMNS FROM  products;
+ $ ALTER TABLE posts MODIFY slug text CHARACTER SET utf8 COLLATE utf8_bin ;
+ $ ALTER TABLE posts CONVERT TO CHARACTER SET utf8 COLLATE utf8_bin;
+ $ ALTER TABLE product_images CONVERT TO CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
  $ mysql -p -e "CREATE DATABASE cv CHARACTER SET latin1 COLLATE latin1_swedish_ci" -u root
  $ mysql -u root cv < ~/Desktop/object.sql
  $ mysqldump  -u root -p --default-character-set=latin1 -c --insert-ignore --skip-set-charset cv > ~/Desktop/tmp.sql
