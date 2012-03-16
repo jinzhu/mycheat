@@ -1,0 +1,10 @@
+require 'base64'
+require 'cgi'
+require 'openssl'
+
+key = 'secret'
+signature = 'secret'
+puts CGI.escape(Base64.encode64("#{OpenSSL::HMAC.digest('sha1',key, signature)}\n"))
+
+puts `openssl enc -aes-128-cbc -k secret -P -md sha1`
+
