@@ -1,0 +1,79 @@
+= GDB
+
+$ gdb qintaobao_web
+
+== Debug a running application
+  $ Run the application
+  $ ps aux | grep a.out
+  (gdb) attach pid
+  $ <C-c> Kill the running application
+  (gdb) run
+
+== Run
+ (gdb) attach <pid>
+ (gdb) run
+ (gdb) Ctrl + c
+ (gdb) continue
+ (gdb) kill
+
+ (gdb) l main.main
+ (gdb) l app/controllers.AppStruct
+ (gdb) l app/controllers.(*HomeController).Index
+
+== Break & Watch
+ (gdb) b app/controllers.(*HomeController).Index
+ (gdb) break filename:line-number
+ (gdb) break filename:function
+ (gdb) break *address
+ (gdb) break +offset // Set a breakpoint specified number of lines forward or back from the position at which execution stopped.
+ (gdb) break -offset
+ (gdb) break line-number if condition
+
+ (gdb) continue
+ (gdb) continue number	//Continue but ignore current breakpoint number times. Usefull for breakpoints within a loop.
+ (gdb) finish	          //Continue to end of function.
+
+ (gdb) where
+ (gdb) until line-number
+ (gdb) watch condition // Suspend processing when condition is met. i.e. x > 5
+
+
+ (gdb) tbreak // Temporary break. Break once only. Break is then removed. See "break" above for options.
+
+ (gdb) clear  // Deletes current breakpoint
+ (gdb) delete <num>
+ (gdb) delete breakpoint-number-or-range
+ (gdb) disable breakpoint-number-or-range // disable 2-9
+ (gdb) enable breakpoint-number-or-range
+
+== Line Execution
+ (gdb) step number-of-steps-to-perform  // Step to next line of code. Will step into a function.
+ (gdb) next number                      // Execute next line of code. Will not enter functions
+ (gdb) until line-number                // Continue processing until you reacha aspecified line number.
+
+== Show Variable
+ (gdb) info locals
+ (gdb) info args
+ (gdb) p variable
+ (gdb) p *variable
+ (gdb) whatis variable
+
+ (gdb) p $len(var)
+ (gdb) p $dtype(var)
+ (gdb) iface var
+
+ (gdb) info goroutines
+ (gdb) goroutine n cmd
+ (gdb) help goroutine
+
+
+== Informations
+ (gdb) info args
+ (gdb) i args	                       List program command line arguments
+ (gdb) info breakpoints 	           List breakpoints
+ (gdb) info break	                   List breakpoint numbers.
+ (gdb) info break breakpoint-number	 List info about specific breakpoint.
+ (gdb) info watchpoints	             List breakpoints
+ (gdb) info registers	               List registers in use
+ (gdb) info threads	                 List threads in use
+ (gdb) info set	                     List set-able option
