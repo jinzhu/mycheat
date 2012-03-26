@@ -1,0 +1,4 @@
+= MongoDB
+
+ $ db.search_results.update({},{ $set:{"syncedat":"2012-03-24 00:02:44"}}, false, true)
+
