@@ -1,0 +1,21 @@
+= Tool
+
+tmux
+
+iftop & iptraf  --  monitor your network
+slurm           -- A Highly Scalable Resource Manager
+                   - slurm -i wlan0
+
+siege           -- An HTTP/HTTPS stress tester
+
+multitail
+
+unison          -- file-synchronization tool
+
+mtr
+
+taskwarrior      -- task
+mutt             -- email (http://crunchbanglinux.org/wiki/howto/howto_setup_mutt_with_gmail_imap)
+
+
+iftop
