@@ -1,0 +1,7 @@
+# ArchLinux
+
+# Add to apt/sources.list
+deb http://mirrors.163.com/debian-backports/ squeeze-backports main contrib non-free
+deb-src http://mirrors.163.com/debian-backports/ squeeze-backports main contrib non-free
+
+$ sudo apt-get -t squeeze-backports install postgresql-client-9.1 postgresql-contrib-9.1 postgresql-server-dev-9.1
