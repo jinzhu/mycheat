@@ -9,3 +9,6 @@
     sleep 60;
     [ "$(md5sum a | awk {'print $1'})" = '文件的MD5码' ] && (echo password | sudo halt);
   done 
+
+# List duplicatd lines
+ $ cat product.tsv | awk {'print $1'} | sort | uniq -d
