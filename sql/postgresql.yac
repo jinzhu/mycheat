@@ -24,3 +24,7 @@
 
 == Installing PostgreSQL Libraries for Ruby
  $ sudo gem install postgres
+
+
+  $ psql  -U postgres
+  postgres=# CREATE ROLE murenwu WITH CREATEDB CREATEROLE;
