@@ -1,0 +1,7 @@
+= Performance
+
+== 200 requests
+  $ siege -r10 -c 20 http://127.0.0.1:9292/list
+
+== 30 seconds
+  $ siege -t30s -c 20 http://127.0.0.1:9292/lists
