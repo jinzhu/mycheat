@@ -1,0 +1,6 @@
+= Abs
+
+  $ sudo abs community/httperf
+  $ cd /var/abs/community/httperf
+  $ makepkg
+  $ pacman -U httperf-0.9.0-5-x86_64.pkg.tar.xz
