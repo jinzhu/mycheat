@@ -28,3 +28,4 @@
 
   $ psql  -U postgres
   postgres=# CREATE ROLE murenwu WITH CREATEDB CREATEROLE;
+  postgres=# ALTER ROLE murenwu LOGIN;
