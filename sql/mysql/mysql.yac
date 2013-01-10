@@ -11,3 +11,11 @@
   delete from translations USING translations, translations as vtable WHERE (translations.id > vtable.id) AND (translations.`key`=vtable.`key`) AND (translations.locale=vtable.locale);
 
   select `key`, locale, count(*) as cnt from translations GROUP BY `key`, locale HAVING cnt > 1;
+
+ SHOW STATUS LIKE '_cache%';
+ SHOW processlist;
+ SHOW GLOBAL STATUS LIKE 'connections';
+ SHOW variables LIKE "%thread%";
+
+ mysqlcheck --all-databases --optimize -uroot
+
