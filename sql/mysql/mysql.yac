@@ -16,6 +16,7 @@
  SHOW processlist;
  SHOW GLOBAL STATUS LIKE 'connections';
  SHOW variables LIKE "%thread%";
+ SET GLOBAL query_cache_size = 536870912;
 
  mysqlcheck --all-databases --optimize -uroot
 
