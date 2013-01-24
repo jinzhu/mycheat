@@ -1,0 +1,10 @@
+= ROM
+adb reboot-bootloader
+fastboot oem lock
+fastboot flashall
+fastboot flash boot boot.img
+
+fastboot getvar version-main
+fastboot getvar security
+fastboot flash zip rom.zip
+fastboot reboot
