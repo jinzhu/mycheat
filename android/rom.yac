@@ -8,3 +8,7 @@ fastboot getvar version-main
 fastboot getvar security
 fastboot flash zip rom.zip
 fastboot reboot
+
+fastboot flash boot boot.img
+fastboot flash recovery recovery.img
+adb push root.zip /sdcard
