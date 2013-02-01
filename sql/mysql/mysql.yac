@@ -22,3 +22,4 @@
 
 == Table './mysql/proc' is marked as crashed and should be repaired:
  mysql> repair table mysql.proc;
+ $ mysqlcheck --repair mysql proc -u root -ppassword
