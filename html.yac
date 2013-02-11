@@ -1,0 +1,3 @@
+= HTML 2 Text
+
+  $ lynx text.html -dump
