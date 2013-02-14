@@ -33,3 +33,6 @@ lsof +L1 shows you all open files that have a link count less than 1, often indi
 
 The -t option returns just a PID
   $ lsof -t -c Mail => 350
+
+List deleted files still using by some processes
+  $ lsof -n | grep  delete
