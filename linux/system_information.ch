@@ -55,3 +55,9 @@
    $ history | awk {'print $2'} | sort | uniq -c | sort -k1 -rn|head
 
    $ sync && sudo bash -c "echo 3 > /proc/sys/vm/drop_caches" 同步硬盘内存,清空内存缓存
+   To free pagecache:
+   $ echo 1 > /proc/sys/vm/drop_caches
+   To free dentries and inodes:
+   $ echo 2 > /proc/sys/vm/drop_caches
+   To free pagecache, dentries and inodes:
+   $ echo 3 > /proc/sys/vm/drop_caches
