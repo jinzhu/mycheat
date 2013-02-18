@@ -12,3 +12,15 @@
 
 # List duplicatd lines
  $ cat product.tsv | awk {'print $1'} | sort | uniq -d
+
+
+!blah：执行最近的以 blah 开头的命令，如 !ls
+!blah:p：仅打印输出，而不执行
+!$：上一条命令的最后一个参数，与 Alt + . 相同
+!$:p：打印输出 !$ 的内容
+!*：上一条命令的所有参数
+!*:p：打印输出 !* 的内容
+^blah：删除上一条命令中的 blah
+^blah^foo：将上一条命令中的 blah 替换为 foo
+$ !!:s/blah/foo/
+^blah^foo^：将上一条命令中所有的 blah 都替换为 foo
