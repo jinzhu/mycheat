@@ -1,4 +1,9 @@
 = NetWork:
+
+== Check Problem
+  $ traceroute www.murenwu.com
+  $ mtr www.murenwu.com
+
 == All System:
 === Static
   $ sudo ifconfig eth0 192.168.201.13 netmask 255.255.255.0
