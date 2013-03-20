@@ -13,6 +13,8 @@
 === Delete configuration files:
   $ pacman -Rn package_name
   $ pacman -Rsn package_name
+=== Force remove a package
+  $ pacman -Rdd nvidia
 
 == Upgrading the System:
   $ pacman -Su
