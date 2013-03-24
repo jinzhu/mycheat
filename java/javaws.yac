@@ -2,3 +2,6 @@
 
 == Fix run JNLP application exception
 $ javaws -Xclearcache
+
+== Setting
+$ itweb-settings
