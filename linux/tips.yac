@@ -24,3 +24,7 @@
 ^blah^foo：将上一条命令中的 blah 替换为 foo
 $ !!:s/blah/foo/
 ^blah^foo^：将上一条命令中所有的 blah 都替换为 foo
+
+
+cat * | grep qortexcn | awk {'print $9'}| cut -d '>'  -f 2 |cut -d ':' -f 1 > ~/a.of
+cat a.of  | sort | uniq -c | sort -t ' ' -k1 -n
