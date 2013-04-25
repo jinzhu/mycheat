@@ -14,3 +14,4 @@ fastboot flash recovery recovery.img
 adb push root.zip /sdcard
 
 adb -s 10.0.1.29:5555 shell
+adb shell pm list packages
