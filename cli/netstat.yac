@@ -7,6 +7,7 @@
   * -i : Interface
 
   $ netstat -atpl
+  $ netstat -p -ntl
 
   $ netstat -nat |grep 202.54.1.10 | awk '{print $6}' | sort | uniq -c | sort -n
   Get List Of All Unique IP Address
