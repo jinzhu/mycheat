@@ -28,6 +28,8 @@
    $ du -sh                 # 查看指定目录的大小
    $ grep MemTotal /proc/meminfo   # 查看内存总量
    $ grep MemFree /proc/meminfo    # 查看空闲内存量
+   $ dmidecode |grep -A16 "Memory Device$" # 内存型号
+   $ dmidecode |grep -A16 "System Information$" # 主板型号
    $ uptime                 # 查看系统运行时间、用户数、负载
    $ cat /proc/loadavg      # 查看系统负载磁盘和分区
    $ mount | column -t      # 查看挂接的分区状态
