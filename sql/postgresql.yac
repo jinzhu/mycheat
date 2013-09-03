@@ -1,4 +1,8 @@
 = PostgreSQL
+
+== Init
+  $ sudo su - postgres -c "initdb --locale en_US.UTF-8 -D '/var/lib/postgres/data'" 
+
   导整个数据库
   如何导出PostgreSQL数据库中的数据：
 
