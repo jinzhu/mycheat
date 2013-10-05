@@ -1,0 +1,11 @@
+= GPG
+== Generate key
+ $ gpg --gen-key
+== Encrypt file
+ $ gpg --encrypt --recipient 'key_name' yourfile
+== Using an existing key
+ $ gpg --edit-key [existing key ID]
+== Decrypt file
+ $ gpg --decrypt $HOME/.offlineimaprc.gpg > $path/gpg-offlineimap
+== Encrypt without password
+  Just type empty password, and confirm multi times
