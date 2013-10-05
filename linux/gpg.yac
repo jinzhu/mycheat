@@ -9,3 +9,7 @@
  $ gpg --decrypt $HOME/.offlineimaprc.gpg > $path/gpg-offlineimap
 == Encrypt without password
   Just type empty password, and confirm multi times
+== Backup
+ $ gpg --export > backup_keys.gpg
+== Restore
+ $ gpg --import backup_keys.gpg
