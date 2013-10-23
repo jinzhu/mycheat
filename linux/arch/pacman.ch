@@ -19,7 +19,7 @@
 == Upgrading the System:
   $ pacman -Su
   $ pacman -Syu
-
+  $ yaourt -Syua --devel 
 == Querying the Package Database:
   $ pacman -Ss package
 
