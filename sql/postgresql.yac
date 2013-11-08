@@ -21,6 +21,7 @@
 
 == Creating a new PostgreSQL user
   $ createuser --superuser robbyrussell -U postgres
+  $ alter user theplant with encrypted password 'password';
 
 == Create a new database
   $ createdb my_test_db
