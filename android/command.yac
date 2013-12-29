@@ -1,16 +1,21 @@
-# create
+# Install sdk
+$ sudo android
+
+# Get errors
+$ sudo android update sdk -u 
+
+# Create
 $ android create project --target 1 --name HelloAndroid --path ./HelloAndroidAppProject --activity HelloAndroidAppActivity --package com.example.helloandroid
 
 $ android list avd
 
-## make
+## Make
 $ ant debug
 $ ant release
 
-## install
+## Install
 $ emulator -avd avd-name
 $ adb install bin/HelloAndroid-debug.apk
-
 
 # Decompiler
 1, android-apktool
